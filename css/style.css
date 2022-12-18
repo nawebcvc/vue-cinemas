@@ -1,0 +1,62 @@
+@import url(fonts.css);
+
+:root {
+    --Comfortaa: 'Comfortaa';
+    --Montserrat: 'Montserrat';
+    --Roboto: 'Roboto';
+    --white: #fff;
+    --black: #000;
+    --linkHover: #ED8E00;
+    --title: #F18128;
+    --btnBg: #F18128;
+    --btnBgHover: #040D1F;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    font-family: var(--Comfortaa);
+}
+
+.title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--title);
+}
+
+.btn {
+    display: inline-block;
+    max-width: 166px;
+    width: 100%;
+    padding: 17px 10px;
+    color: var(--black);
+    text-align: center;
+    border-radius: 4px;
+    background: var(--btnBg);
+}
+
+.btn:hover {
+    background: var(--btnBgHover);
+    color: var(--white);
+}
