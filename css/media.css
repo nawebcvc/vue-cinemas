@@ -31,15 +31,50 @@
         background: var(--black);
         width: 200px;
         transition: 0.5s linear;
+        z-index: 999;
     }
     
     .menu:focus ~ .header__list {
         left: 0;
     }
     
+    .header__banner {
+        height: 70vh;
+        z-index: -1;
+    }
+    
+    .header__title {
+        font-size: 50px;
+    }
+    
+    
 }
 @media(max-width: 576px){
     .container {
         max-width: 100%;
+    }
+    
+    .btn {
+        width: 166px;
+    }
+    
+    .header__banner .container {
+        align-items: center;
+    }
+    
+    .header__title {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 400px) {
+    
+    .header__desc {
+        margin-bottom: 30px;
+    }
+    
+    .header__btns {
+        flex-direction: column;
+        row-gap: 20px;
     }
 }
