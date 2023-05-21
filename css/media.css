@@ -1,27 +1,84 @@
-@media(max-width: 1200px){
+@media(max-width: 1200px) {
     .container {
         max-width: 960px;
     }
+
+    .films__cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .films__card {
+        max-width: 330px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .collections__cards {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .collections__card {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
-@media(max-width: 992px){
+
+@media(max-width: 992px) {
     .container {
         max-width: 720px;
     }
+
+    .series__cards {
+        grid-template-rows: repeat(6, 190px);
+    }
+
+    .series__item:nth-child(2) {
+        grid-row-end: 5;
+        grid-column-end: -1;
+    }
+
+    .series__item:nth-child(3) {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .series__item:nth-child(4) {
+        grid-row-start: 5;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .series__item:nth-child(5) {
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .series__item:nth-child(6) {
+        grid-column-start: 3;
+        grid-column-end: -1;
+    }
 }
-@media(max-width: 768px){
+
+@media(max-width: 768px) {
     .container {
         max-width: 540px;
     }
-    
+
     .header__nav {
         position: relative;
         padding: 20px 0;
+        z-index: 2;
     }
-    
+
     .menu {
         display: flex;
     }
-    
+
     .header__list {
         flex-direction: column;
         align-items: center;
@@ -30,51 +87,133 @@
         left: -200px;
         background: var(--black);
         width: 200px;
-        transition: 0.5s linear;
-        z-index: 999;
+        transition: 0.5s;
+        z-index: 99;
+
     }
-    
+
     .menu:focus ~ .header__list {
         left: 0;
     }
-    
+
     .header__banner {
-        height: 70vh;
-        z-index: -1;
+        min-height: 100vh;
+        height: 100%;
+        z-index: 1;
     }
-    
+
     .header__title {
         font-size: 50px;
     }
-    
-    
+
+    .premier__content {
+        align-items: center;
+    }
+
+    .premier__desc {
+        text-align: center;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
-@media(max-width: 576px){
+
+@media(max-width: 576px) {
     .container {
         max-width: 100%;
-    }
-    
-    .btn {
-        width: 166px;
+        text-align: center;
     }
     
     .header__banner .container {
         align-items: center;
+        height: 100%;
     }
-    
+
     .header__title {
-        font-size: 28px;
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .header__desc {
+        text-align: center;
+    }
+
+    .btn {
+        width: 166px;
+    }
+
+    .films {
+        padding-bottom: 40px;
+    }
+
+    .films .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .films__cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .films__card {
+        min-height: 400px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .films__card-desc {
+        text-align: center;
+    }
+
+    .premier__content {
+        padding-bottom: 25px;
+        padding-top: 25px;
+        justify-content: center;
+    }
+
+    .premier__logo {
+        margin-bottom: 25px;
+    }
+
+    .premier__desc {
+        margin-bottom: 25px;
+    }
+
+    .collections__cards {
+        text-align: left !important;
+    }
+
+    .series__cards {
+        grid-template: minmax(190px, auto) repeat(5, 190px) / 1fr;
+    }
+
+    .series__item {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+
+    .series__item:nth-child(1) .series__item-title {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .series__desc {
+        margin-bottom: 15px;
     }
 }
 
 @media(max-width: 400px) {
-    
-    .header__desc {
-        margin-bottom: 30px;
-    }
-    
     .header__btns {
         flex-direction: column;
         row-gap: 20px;
+    }
+
+    .footer__span {
+        font-size: 15px;
+        line-height: 16px;
     }
 }
